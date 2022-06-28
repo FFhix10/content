@@ -6,7 +6,7 @@ tags:
 ---
 {{AddonSidebar}}
 
-If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, we'll write a slightly more complex extension that demonstrates a few more of the APIs.
+If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, you'll write a slightly more complex extension that demonstrates a few more of the APIs.
 
 The extension adds a new button to the Firefox toolbar. When the user clicks the button, we display a popup enabling them to choose an animal. Once they choose an animal, we'll replace the current page's content with a picture of the chosen animal.
 
@@ -24,7 +24,7 @@ To implement this, we will:
 - **package some images of the animals, to replace images in the web page**.
   We'll make the images "web accessible resources" so the web page can refer to them.
 
-You could visualise the overall structure of the extension like this:
+You could visualize the overall structure of the extension like this:
 
 ![](untitled-1.png)
 
@@ -37,8 +37,6 @@ It's a simple extension, but shows many of the basic concepts of the WebExtensio
 - packaging resources with your extension that can be used by web pages
 
 You can find [complete source code for the extension on GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
-
-To write this extension, you'll need Firefox 45 or newer.
 
 ## Writing the extension
 
@@ -103,7 +101,7 @@ Note that all paths given are relative to manifest.json itself.
 
 The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager (you can open this by visiting the URL "about:addons"). Our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-48.png".
 
-Create the "icons" directory and save an icon there named "beasts-48.png".  You could use [the one from our example](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set), and used under the terms of its [license](https://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Create the "icons" directory and save an icon there named "beasts-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png), which is taken from the [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set), and used under the terms of its [license](https://www.aha-soft.com/free-icons/free-retina-icon-set/).
 
 If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
@@ -118,7 +116,7 @@ If you choose to supply your own icon, It should be 48x48 pixels. You could also
 
 The toolbar button also needs an icon, and our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-32.png".
 
-Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from our example](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](http://www.iconbeast.com/free) and used under the terms of its [license](http://www.iconbeast.com/faq/).
+Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](http://www.iconbeast.com/free/) and used under the terms of its [license](http://www.iconbeast.com/faq/).
 
 If you don't supply a popup, then a click event is dispatched to your extension when the user clicks the button. If you do supply a popup, the click event is not dispatched, but instead, the popup is opened. We want a popup, so let's create that next.
 
@@ -326,12 +324,12 @@ If executing the content script is successful, we call `listenForClicks()`. This
 The `beastify()` function does three things:
 
 - map the button clicked to a URL pointing to an image of a particular beast
-- hide the page's whole content by injecting some CSS, using the [`browser.tabs.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) API
+- hide the page's whole content by injecting some CSS, using the [`browser.tabs.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) API
 - send a "beastify" message to the content script using the [`browser.tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API, asking it to beastify the page, and passing it the URL to the beast image.
 
 The `reset()` function essentially undoes a beastify:
 
-- remove the CSS we added, using the [`browser.tabs.removeCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS) API
+- remove the CSS we added, using the [`browser.tabs.removeCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS) API
 - send a "reset" message to the content script asking it to reset the page.
 
 ### The content script
@@ -412,36 +410,36 @@ Create a new directory called "beasts", and add the three images in that directo
 
 First, double check that you have the right files in the right places:
 
-    beastify/
+```
+beastify/
 
-        beasts/
-            frog.jpg
-            snake.jpg
-            turtle.jpg
+    beasts/
+        frog.jpg
+        snake.jpg
+        turtle.jpg
 
-        content_scripts/
-            beastify.js
+    content_scripts/
+        beastify.js
 
-        icons/
-            beasts-32.png
-            beasts-48.png
+    icons/
+        beasts-32.png
+        beasts-48.png
 
-        popup/
-            choose_beast.css
-            choose_beast.html
-            choose_beast.js
+    popup/
+        choose_beast.css
+        choose_beast.html
+        choose_beast.js
 
-        manifest.json
+    manifest.json
+```
 
-Starting in Firefox 45, you can install extensions temporarily from disk.
+Now load the extension as a temporary add-on. Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your **manifest.json** file. You should then see the extension's icon appear in the Firefox toolbar:
 
-Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your manifest.json file. You should then see the extension's icon appear in the Firefox toolbar:
+![The beastify icon in the Firefox toolbar](beastify_icon.png)
 
-{{EmbedYouTube("sAM78GU4P34")}}
+Open a web page, click the icon, select a beast, and see the web page change:
 
-Open a web page, then click the icon, select a beast, and see the web page change:
-
-{{EmbedYouTube("YMQXyAQSiE8")}}
+![A page replaced with the image of a turtle](beastify_page.png)
 
 ## Developing from the command line
 

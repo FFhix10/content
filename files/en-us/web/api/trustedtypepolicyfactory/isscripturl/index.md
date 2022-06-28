@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.isScriptURL()
 slug: Web/API/TrustedTypePolicyFactory/isScriptURL
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,9 @@ The **`isScriptURL()`** method of the {{domxref("TrustedTypePolicyFactory")}} in
 
 ## Syntax
 
-    var isScriptURL = TrustedTypePolicyFactory.isScriptURL(value);
+```js
+isScriptURL(value)
+```
 
 ### Parameters
 

@@ -19,10 +19,12 @@ Detects the language of the provided text using the [Compact Language Detector](
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
+See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this function.
+
 ## Syntax
 
 ```js
-var detectingLanguages = browser.i18n.detectLanguage(
+let detectingLanguages = browser.i18n.detectLanguage(
   text                  // string
 )
 ```
@@ -55,21 +57,21 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onLanguageDetected(langInfo) {
-  for (lang of  langInfo.languages) {
+  for (lang of langInfo.languages) {
     console.log("Language is: " + lang.language);
     console.log("Percentage is: " + lang.percentage);
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers."
+let text = "L'homme est né libre, et partout il est dans les fers."
 
-var detecting = browser.i18n.detectLanguage(text);
+let detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-detectLanguage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/#method-detectLanguage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -39,7 +39,7 @@ new BigUint64Array(buffer, byteOffset, length);
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
 - `typedArray`
   - : When called with a `typedArray` argument, which can be an
-    object of any of the typed array types (such as `Int32Array`), the
+    object of either of the {{glossary("bigint")}} typed-array types (such as {{JSxRef("BigInt64Array")}}), the
     `typedArray` gets copied into a new typed array. Each value in
     `typedArray` is converted to the corresponding type of the
     constructor before being copied into the new array. The length of the new typed array
@@ -64,28 +64,28 @@ new BigUint64Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var biguint64 = new BigUint64Array(2);
+const biguint64 = new BigUint64Array(2);
 biguint64[0] = 42n;
 console.log(biguint64[0]); // 42n
 console.log(biguint64.length); // 2
 console.log(biguint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new BigUint64Array([21n,31n]);
+const arr = new BigUint64Array([21n,31n]);
 console.log(arr[1]); // 31n
 
 // From another TypedArray
-var x = new BigUint64Array([21n, 31n]);
-var y = new BigUint64Array(x);
+const x = new BigUint64Array([21n, 31n]);
+const y = new BigUint64Array(x);
 console.log(y[0]); // 21n
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new BigUint64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(32);
+const z = new BigUint64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
-var biguint64 = new BigUint64Array(iterable);
+const iterable = function*(){ yield* [1n, 2n, 3n]; }();
+const biguint64_2 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```
 

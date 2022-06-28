@@ -1,6 +1,7 @@
 ---
 title: Serial.getPorts()
 slug: Web/API/Serial/getPorts
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -15,7 +16,13 @@ The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{j
 
 ## Syntax
 
-    var promise = Serial.getPorts();
+```js
+getPorts()
+```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -23,7 +30,7 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}}
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `"SecurityError"`
+- `SecurityError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
 
 ## Examples

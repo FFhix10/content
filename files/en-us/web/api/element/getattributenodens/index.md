@@ -1,6 +1,7 @@
 ---
 title: Element.getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -14,11 +15,18 @@ Returns the `Attr` node for the attribute with the given namespace and name.
 
 ## Syntax
 
-    attributeNode = element.getAttributeNodeNS(namespace, nodeName)
+```js
+getAttributeNodeNS(namespace, nodeName)
+```
 
-- `attributeNode` is the node for specified attribute.
+### Parameters
+
 - `namespace` is a string specifying the namespace of the attribute.
 - `nodeName` is a string specifying the name of the attribute.
+
+### Return value
+
+The node for specified attribute.
 
 ## Notes
 

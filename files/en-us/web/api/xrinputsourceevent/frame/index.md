@@ -1,6 +1,7 @@
 ---
 title: XRInputSourceEvent.frame
 slug: Web/API/XRInputSourceEvent/frame
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -38,15 +39,14 @@ described by the object took place.
 ## Usage notes
 
 The event frame does not correspond to a visual frame as is delivered to the frame
-rendering callback function (see [Rendering and the WebXR frame
-rendering callback](/en-US/docs/Web/API/WebXR_Device_API/Rendering) for details on the callback). Instead, the `XRFrame`
+rendering callback function (see [Rendering and the WebXR frame rendering callback](/en-US/docs/Web/API/WebXR_Device_API/Rendering) for details on the callback). Instead, the `XRFrame`
 specified by the `frame` property is a method to provide access to the
 {{domxref("XRFrame.getPose", "getPose()")}} method, which you can use to get the
 relative positions of the objects in the scene at the time the event occurred.
 
 However, since the event frame isn't an animation frame, there is no viewer pose
 available to represent the viewer's current point of view; the results of calling
-{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an 
+{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an
 {{domxref("XRViewerPose")}} with an empty {{domxref("XRViewerPose.views", "views")}}
 list.
 

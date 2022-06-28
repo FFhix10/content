@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WebAssembly.LinkError.LinkError
 
 The **`WebAssembly.LinkError()`** constructor creates a new
 WebAssembly `LinkError` object, which indicates an error during module
-instantiation (besides [traps](https://webassembly.org/docs/semantics/#traps)
+instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap)
 from the start function).
 
 ## Syntax
@@ -28,9 +28,9 @@ new WebAssembly.LinkError(message, fileName, lineNumber)
 
 - `message` {{optional_inline}}
   - : Human-readable description of the error.
-- `fileName` {{optional_inline}}
+- `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception.
-- `lineNumber` {{optional_inline}}
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : The line number of the code that caused the exception.
 
 ## Examples
@@ -66,5 +66,4 @@ try {
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

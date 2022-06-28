@@ -7,12 +7,13 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.5
 ---
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`405 Method Not Allowed`** response status code indicates that the request method is known by the server but is not supported by the target resource.
+The HyperText Transfer Protocol (HTTP) **`405 Method Not Allowed`** response status code indicates that the server knows the request method, but the target resource doesn't support this method.
 
-The server **must** generate an **`Allow`** header field in a 405 response containing a list of the target resource's currently supported methods.
+The server **must** generate an **`Allow`** header field in a 405 status code response. The field must contain a list of methods that the target resource currently supports.
 
 ## Status
 
@@ -22,9 +23,7 @@ The server **must** generate an **`Allow`** header field in a 405 response conta
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "405 Method Not Allowed" , "6.5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

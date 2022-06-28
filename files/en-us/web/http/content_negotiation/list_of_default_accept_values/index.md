@@ -17,7 +17,7 @@ These are the values sent when the context doesn't give better information. Note
 
 | User Agent                 | Value                                                                                                                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox 91 and later [1]   | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                                                                 |
+| Firefox 92 and later [1]   | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                                                                 |
 | Firefox 72 to 91 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                                                            |
 | Firefox 66 to 71 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       |
 | Firefox 65 [1]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                                                            |
@@ -28,7 +28,7 @@ These are the values sent when the context doesn't give better information. Note
 | Edge                       | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                                                      |
 | Opera                      | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1`                                     |
 
-\[1] This value can be modified using the [`network.http.accept.default`](http://kb.mozillazine.org/Network.http.accept.default) parameter.
+\[1] This value can be modified using the [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) parameter.
 
 \[2] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
 

@@ -1,11 +1,13 @@
 ---
 title: Web Crypto API
 slug: Web/API/Web_Crypto_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
   - Reference
   - Web Crypto API
+browser-compat: api.Crypto
 ---
 {{DefaultAPISidebar("Web Crypto API")}}
 
@@ -19,7 +21,7 @@ The **Web Crypto API** is an interface allowing a script to use cryptographic pr
 >
 > Errors in security system design and implementation can make the security of the system completely ineffective.
 >
-> **If you're not sure you know what you are doing, you probably shouldn't be using this API.**
+> Please learn and experiment, but don't guarantee or imply the security of your work before an individual knowledgeable in this subject matter thoroughly reviews it. The [Crypto 101 Course](https://www.crypto101.io/) can be a great place to start learning about the design and implementation of secure systems.
 
 ## Interfaces
 
@@ -27,12 +29,8 @@ Some browsers implemented an interface called {{domxref("Crypto")}} without havi
 
 ## Specifications
 
-| Specification                                            |
-| -------------------------------------------------------- |
-| [Web Cryptography API](https://w3c.github.io/webcrypto/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `Crypto`
-
-{{Compat("api.Crypto")}}
+{{Compat}}

@@ -1,11 +1,13 @@
 ---
 title: WebHID API
 slug: Web/API/WebHID_API
+page-type: web-api-overview
 tags:
   - API
   - Advanced
   - WebHID
   - WebHID API
+browser-compat: api.HID
 ---
 {{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}
 
@@ -19,12 +21,12 @@ A Human Interface Device (HID) is a type of device that takes input from or prov
 <!---->
 
 - {{domxref("HIDDevice")}}
-  - : Represents an HID device. It's possible for a single physical device to be represented by multiple `HIDDevice` obects.
+  - : Represents an HID device. It's possible for a single physical device to be represented by multiple `HIDDevice` objects.
 
 <!---->
 
 - {{domxref("HIDInputReportEvent")}}
-  - : Passed to {{domxref("HIDDevice.oninputreport")}} when an input report is received from any associated HID device.
+  - : Passed to {{domxref("HIDDevice.inputreport_event")}} when an input report is received from any associated HID device.
 
 <!---->
 
@@ -41,7 +43,7 @@ const device = await navigator.hid.requestDevice({filters: []})
 // Select one and click on `Connect` button. Then the device will be an array with the selected device in it.
 ```
 
-We can retrieve all the connected devices and log the device names to the console.
+We can retrieve all the devices the website has been granted access to previously and log the device names to the console.
 
 ```js
 let devices = await navigator.hid.getDevices();
@@ -58,7 +60,7 @@ navigator.hid.addEventListener('disconnect', (event) => {
     console.dir(event)
 });
 // For example, when my connected keyboard gets disconnected, the log in the console will show:
-// HID disconnected: USB USB Keyboard
+// HID disconnected: USB Keyboard
 // {
 //    bubbles: false
 //    cancelBubble: false
@@ -66,7 +68,7 @@ navigator.hid.addEventListener('disconnect', (event) => {
 //    composed: false
 //    currentTarget: HID {onconnect: null, ondisconnect: null}
 //    defaultPrevented: false
-//    device: HIDDevice {oninputreport: null, opened: false, vendorId: 6700, productId: 11555, productName: "USB USB Keyboard", …}
+//    device: HIDDevice {oninputreport: null, opened: false, vendorId: 6700, productId: 11555, productName: "USB Keyboard", …}
 //    eventPhase: 0
 //    isTrusted: true
 //    path: []
@@ -82,10 +84,8 @@ navigator.hid.addEventListener('disconnect', (event) => {
 
 ## Specifications
 
-| Specification                | Status                   | Comment             |
-| ---------------------------- | ------------------------ | ------------------- |
-| {{SpecName('WebHID')}} | {{Spec2('WebHID')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.HID")}}
+{{Compat}}

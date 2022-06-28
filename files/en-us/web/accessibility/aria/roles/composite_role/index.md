@@ -1,8 +1,7 @@
 ---
 title: 'ARIA: composite role'
-slug: Web/Accessibility/ARIA/roles/composite_role
-tags: 
-
+slug: Web/Accessibility/ARIA/Roles/composite_role
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -10,15 +9,15 @@ tags:
   - Abstract Role
   - Reference
   - NeedsContent
+spec-urls: https://w3c.github.io/aria/#composite
 ---
-
-The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles) indicates a widget that may contain navigable descendants or owned children.
+The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles) indicates a widget that may contain navigable descendants or owned children.
 
 > **Note:**  The `composite` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
-`Composite` is an abstract role used for the ontology. Don't use this role in content. Instead, use the composite subclasses of [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role), [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) 
+`Composite` is an abstract role used for the ontology. Don't use this role in content. Instead, use the composite subclasses of [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role), [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
 
 ## Best Practices
 
@@ -26,10 +25,7 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#composite","ARIA: composite role")}}                                             | {{Spec2('ARIA')}}                         |
-
+{{Specifications}}
 
 ## See Also
 

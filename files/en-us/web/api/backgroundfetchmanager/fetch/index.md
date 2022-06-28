@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchManager.fetch()
 slug: Web/API/BackgroundFetchManager/fetch
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -18,7 +19,10 @@ The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface 
 
 ## Syntax
 
-    let backgroundFetchRegistration = BackgroundFetchManager.fetch(id, requests [,options]);
+```js
+fetch(id, requests)
+fetch(id, requests, options)
+```
 
 ### Parameters
 
@@ -35,16 +39,12 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistrat
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : Raised if no request is provided, if the mode of a request is 'no-cors', if no service worker is present, a request already exists with the requested `id`, or the request fails.
-- DOMException
-
-  - : This method may raise a {{domxref("DOMException")}} of the following types:
-
-    | Exception         | Description                                                                     |
-    | ----------------- | ------------------------------------------------------------------------------- |
-    | `AbortError`      | Indicates the fetch was aborted.                                                |
-    | `NotAllowedError` | Indicates that user permission has not been granted to make background fetches. |
+- `AbortError` {{domxref("DOMException")}}
+  - : Indicates that the fetch was aborted.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Indicates that user permission has not been granted to make background fetches.
 
 ## Examples
 

@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesisUtterance.text
 slug: Web/API/SpeechSynthesisUtterance/text
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,26 +13,18 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.text
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`text`** property of the
-{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be
-synthesised when the utterance is spoken.
+{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be synthesized when the utterance is spoken.
 
-The text may be provided as plain text, or a well-formed [SSML](https://www.w3.org/TR/speech-synthesis/)
-document. The SSML tags will be stripped away by devices that don't support SSML.
+The text may be provided as plain text, or a well-formed [SSML](https://www.w3.org/TR/speech-synthesis/) document.
+The SSML tags will be stripped away by devices that don't support SSML.
 
-## Syntax
+## Value
 
-```js
-var myText = speechSynthesisUtteranceInstance.text;
-speechSynthesisUtteranceInstance.text = 'Hello I am speaking';
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the text to the synthesised. The maximum length
-of the text that can be spoken in each utterance is 32,767 characters.
+A string representing the text to the synthesized.
+The maximum length of the text that can be spoken in each utterance is 32,767 characters.
 
 ## Examples
 

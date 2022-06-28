@@ -1,6 +1,7 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -12,13 +13,15 @@ tags:
   - mouse
 browser-compat: api.MouseEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse). Common events using this interface include {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}.
+The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse).
+Common events using this interface include {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}}.
 
-`MouseEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}. Though the {{domxref("MouseEvent.initMouseEvent()")}} method is kept for backward compatibility, creating of a `MouseEvent` object should be done using the {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} constructor.
+`MouseEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.
+Though the {{domxref("MouseEvent.initMouseEvent()")}} method is kept for backward compatibility, creating of a `MouseEvent` object should be done using the {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} constructor.
 
-Several more specific events are based on `MouseEvent`, including {{domxref("WheelEvent")}} and {{domxref("DragEvent")}}.
+Several more specific events are based on `MouseEvent`, including {{domxref("WheelEvent")}}, {{domxref("DragEvent")}}, and {{domxref("PointerEvent")}}.
 
 {{InheritanceDiagram}}
 
@@ -36,26 +39,30 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : The button number that was pressed (if applicable) when the mouse event was fired.
 - {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
-  - : The buttons being depressed (if any) when the mouse event was fired.
+  - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
   - : The X coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the current layer.
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the current layer.
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
+  - : The X coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
-- {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
+  - : The Y coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
+- {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}
   - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
-- {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}
+- {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer relative to the position of the padding edge of the target node.
-- {{domxref("MouseEvent.pageX")}} {{readonlyinline}}{{experimental_inline}}
+- {{domxref("MouseEvent.pageX")}} {{readonlyinline}}
   - : The X coordinate of the mouse pointer relative to the whole document.
-- {{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}
+- {{domxref("MouseEvent.pageY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer relative to the whole document.
 - {{domxref("MouseEvent.region")}} {{readonlyinline}}
   - : Returns the id of the hit region affected by the event. If no hit region is affected, `null` is returned.
@@ -67,17 +74,17 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The Y coordinate of the mouse pointer in global (screen) coordinates.
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
-  - : The button being pressed when the mouse event was fired.
 - {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{readonlyinline}}
-  - : The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between `0.0` (minimum pressure) and `1.0` (maximum pressure). Instead of using this deprecated (and non-standard) property, you should instead use {{domxref("PointerEvent")}} and look at its {{domxref("PointerEvent.pressure", "pressure")}} property.
+  - : The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between `0.0` (minimum pressure) and `1.0` (maximum pressure).
+    Instead of using this deprecated (and non-standard) property, you should use {{domxref("PointerEvent")}} and look at its {{domxref("PointerEvent.pressure", "pressure")}} property.
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : The type of device that generated the event (one of the `MOZ_SOURCE_*` constants listed below). This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).
+  - : The type of device that generated the event (one of the `MOZ_SOURCE_*` constants).
+    This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
   - : The amount of pressure applied when clicking
-- {{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.x")}} {{readonlyinline}}
   - : Alias for {{domxref("MouseEvent.clientX")}}.
-- {{domxref("MouseEvent.y")}} {{experimental_inline}}{{readonlyinline}}
+- {{domxref("MouseEvent.y")}} {{readonlyinline}}
   - : Alias for {{domxref("MouseEvent.clientY")}}
 
 ## Constants
@@ -98,7 +105,8 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Example
 
-This example demonstrates simulating a click (programmatically generating a click event) on a checkbox using DOM methods. Event state (canceled or not) is then determined with the return value of method {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}}.
+This example demonstrates simulating a click (programmatically generating a click event) on a checkbox using DOM methods.
+Event state (canceled or not) is then determined with the return value of method {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}}.
 
 ### HTML
 

@@ -1,6 +1,7 @@
 ---
 title: PresentationRequest.start()
 slug: Web/API/PresentationRequest/start
+page-type: web-api-instance-method
 tags:
   - Experimental
   - Method
@@ -21,7 +22,7 @@ user to select a display and grant permission to use that display.
 
 ```js
 var promise = presentationRequest.start()
-promise.then(function(PresentationConnection) { ... })
+promise.then(function(PresentationConnection) { /* ... */ })
        .catch(function(error) { ...})
 ```
 

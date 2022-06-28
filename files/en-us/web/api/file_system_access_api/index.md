@@ -1,6 +1,7 @@
 ---
 title: File System Access API
 slug: Web/API/File_System_Access_API
+page-type: web-api-overview
 tags:
   - API
   - Directory
@@ -11,6 +12,11 @@ tags:
   - Landing
   - Overview
   - working with files
+browser-compat:
+  - api.FileSystemHandle
+  - api.FileSystemFileHandle
+  - api.FileSystemDirectoryHandle
+  - api.FileSystemWritableFileStream
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
@@ -26,7 +32,7 @@ These handles represent the file or directory on the user's system. You must fir
 
 The handle provides its own functionality and there are a few differences depending on whether a file or directory was selected (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected.
 
-There is also “save” functionality, using the {{domxref('FilesystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{domxref('USVString')}} or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
+There is also "save" functionality, using the {{domxref('FilesystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
 
 This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
 
@@ -106,7 +112,7 @@ The following asynchronous function uses `resolve()` to find the path to a chose
 async function returnPathDirectories(directoryHandle) {
 
   // Get a file handle by showing a file picker:
-  const handle = await self.showOpenFilePicker();
+  const [handle] = await self.showOpenFilePicker();
   if (!handle) {
     // User cancelled, or otherwise failed to open a file.
     return;
@@ -115,10 +121,10 @@ async function returnPathDirectories(directoryHandle) {
   // Check if handle exists inside directory our directory handle
   const relativePaths = await directoryHandle.resolve(handle);
 
-  if (relativePath === null) {
+  if (relativePaths === null) {
     // Not inside directory handle
   } else {
-    // relativePath is an array of names, giving the relative path
+    // relativePaths is an array of names, giving the relative path
 
     for (const name of relativePaths) {
       // log each entry
@@ -169,10 +175,11 @@ writableStream.write({ type: "truncate", size: size })
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('File System Access API')}} | {{Spec2('File System Access API')}} | Initial definition. |
+{{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

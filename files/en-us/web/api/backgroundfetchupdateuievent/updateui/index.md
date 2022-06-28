@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchUpdateUIEvent.updateUI()
 slug: Web/API/BackgroundFetchUpdateUIEvent/updateUI
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,9 @@ This method may only be run once, to notify the user on a failed or a successful
 
 ## Syntax
 
-    let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);
+```js
+updateUI(options)
+```
 
 ### Parameters
 
@@ -30,16 +33,16 @@ This method may only be run once, to notify the user on a failed or a successful
       - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
 
         - `src`
-          - : A {{domxref("DOMString","string")}} which is a URL of an image.
+          - : A string which is a URL of an image.
         - `sizes`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
+          - : A string which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
         - `type`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} containing an image MIME type.
+          - : A string containing an image MIME type.
         - `label`{{optional_inline}}
-          - : A {{domxref("DOMString","string")}} providing a name for the associated image.
+          - : A string providing a name for the associated image.
 
     - `title`{{optional_inline}}
-      - : A {{domxref("DOMString", "string")}} containing text to update the title of the user interface.
+      - : A string containing the new title of the user interface.
 
 ### Return value
 
@@ -47,7 +50,7 @@ A {{jsxref("Promise")}}.
 
 ### Exceptions
 
-- `InvalidStateError` {{domxref("DOMException")}} 
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if any of the following are true:
     - The {{domxref("Event.isTrusted","isTrusted")}} property is `false`.
     - The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set, indicating that the `updateUI()` method has already been called.

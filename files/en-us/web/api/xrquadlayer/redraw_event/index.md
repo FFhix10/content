@@ -1,6 +1,7 @@
 ---
 title: 'XRQuadLayer: redraw event'
 slug: Web/API/XRQuadLayer/redraw_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -18,28 +19,26 @@ The `redraw` event is sent to the `XRQuadLayer` object when the underlying resou
 
 See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is also available to `XRQuadLayer` objects through inheritance from {{domxref("XRCompositionLayer")}}.
 
-The event is of type {{domxref("XRLayerEvent")}}. Also available through the `XRQuadLayer.onredraw` event handler property.
+## Syntax
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("XRLayerEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler</th>
-      <td><code>XRQuadLayer.onredraw</code></td>
-    </tr>
-  </tbody>
-</table>
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('redraw', event => { })
+
+onredraw = event => { }
+```
+
+## Event type
+
+An {{domxref("XRLayerEvent")}}. Inherits from {{domxref("Event")}}.
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("XRLayerEvent.layer", "layer")}} {{ReadOnlyInline}}
+  - : The {{domxref("XRLayer")}} which generated the event.
 
 ## Examples
 
@@ -53,7 +52,7 @@ quadLayer.addEventListener("redraw", function(event) {
 });
 ```
 
-Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
+Alternatively, you can use the `onredraw` event handler property to establish a handler for the `redraw` event:
 
 ```js
 quadLayer.onredraw = function(event) {

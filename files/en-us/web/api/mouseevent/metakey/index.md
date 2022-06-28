@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.metaKey
 slug: Web/API/MouseEvent/metaKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,34 +12,23 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.metaKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`MouseEvent.metaKey`** read-only property is a
-boolean value that indicates whether the <kbd>meta</kbd> key was pressed or not
-when a given mouse event occurs.
+The **`MouseEvent.metaKey`** read-only property is a boolean value that indicates whether the <kbd>meta</kbd> key was pressed or not when a given mouse event occurs.
 
-Be aware that many operating systems bind special functionality to the <kbd>meta</kbd>
-key, so this property may be `false` even when the key is actually pressed.
+Be aware that many operating systems bind special functionality to the <kbd>meta</kbd> key, so this property may be `false` even when the key is actually pressed.
 On Windows, for example, this key may open the Start menu.
 
-> **Note:** On Macintosh keyboards, this key is the <kbd>command</kbd> key
-> (<kbd>⌘</kbd>). On Windows keyboards, this key is the Windows key (<kbd>⊞</kbd>).
+> **Note:** On Macintosh keyboards, this key is the <kbd>command</kbd> key (<kbd>⌘</kbd>).
+> On Windows keyboards, this key is the Windows key (<kbd>⊞</kbd>).
 
-## Syntax
+## Value
 
-```js
-var metaKeyPressed = instanceOfMouseEvent.metaKey
-```
+A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-### Return value
+## Examples
 
-A boolean value, where `true` indicates that the key is pressed, and
-`false` indicates that the key is _not_ pressed.
-
-## Example
-
-This example logs the `metaKey` property when you trigger a
-{{Event("click")}} event.
+This example logs the `metaKey` property when you trigger a {{Event("click")}} event.
 
 ### HTML
 
@@ -60,7 +50,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

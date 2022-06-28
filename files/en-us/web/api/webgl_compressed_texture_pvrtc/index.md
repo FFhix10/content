@@ -1,6 +1,7 @@
 ---
 title: WEBGL_compressed_texture_pvrtc
 slug: Web/API/WEBGL_compressed_texture_pvrtc
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -16,11 +17,12 @@ Compressed textures reduce the amount of memory needed to store a texture on the
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** PVRTC is typically only available on mobile devices with PowerVR chipsets. It is used in all generations of the iPhone, iPod Touch and iPad and supported on certain Android devices that use a PowerVR GPU.
+> **Note:** PVRTC is typically only available on mobile devices with PowerVR chipsets.
+> It is used in all generations of the iPhone, iPod Touch and iPad and supported on certain Android devices that use a PowerVR GPU.
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
->
-> **Note**: On iOS devices, this extension is named `WEBKIT_WEBGL_compressed_texture_pvrtc`.
+
+> **Note:** On iOS devices, this extension is named `WEBKIT_WEBGL_compressed_texture_pvrtc`.
 
 ## Constants
 

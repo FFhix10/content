@@ -1,6 +1,7 @@
 ---
 title: DOMParser.parseFromString()
 slug: Web/API/DOMParser/parseFromString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -14,18 +15,18 @@ The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface par
 ## Syntax
 
 ```js
-const doc = domparser.parseFromString(string, mimeType)
+parseFromString(string, mimeType)
 ```
 
 ### Parameters
 
 - `string`
-  - : The {{domxref("DOMString")}} to be parsed. It must contain either an
+  - : The string to be parsed. It must contain either an
     {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}}, or
     {{Glossary("svg")}} document.
 - `mimeType`
 
-  - : A {{domxref("DOMString")}}. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:
+  - : A string. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:
 
     - `text/html`
     - `text/xml`
@@ -33,7 +34,7 @@ const doc = domparser.parseFromString(string, mimeType)
     - `application/xhtml+xml`
     - `image/svg+xml`
 
-    A value of `text/html` will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}. 
+    A value of `text/html` will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}.
 
     The other valid values (`text/xml`, `application/xml`, `application/xhtml+xml`, and `image/svg+xml`) are functionally equivalent. They all invoke the XML parser, and the method will return a {{domxref("XMLDocument")}}.
 

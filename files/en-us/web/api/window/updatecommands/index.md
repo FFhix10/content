@@ -1,6 +1,7 @@
 ---
 title: Window.updateCommands()
 slug: Web/API/Window/updateCommands
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,11 +21,17 @@ Updates the state of commands of the current chrome window (UI).
 
 ## Syntax
 
-    window.updateCommands("sCommandName")
+```js
+updateCommands("sCommandName")
+```
 
-## Parameters
+### Parameters
 
 - `sCommandName` is a particular string which describes what kind of update event this is (e.g. whether we are in bold right now).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Notes
 

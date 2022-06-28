@@ -27,7 +27,9 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 
 ## Syntax
 
-{{csssyntax}}
+```
+:hover
+```
 
 ## Examples
 
@@ -56,12 +58,6 @@ a:hover {
 
 {{EmbedLiveSample("Basic_example")}}
 
-### Image gallery
-
-You can use the `:hover` pseudo-class to build an image gallery with full-size images that show only when the mouse moves over a thumbnail. See [this demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip") for a possible cue.
-
-> **Note:** For an analogous effect, but based on the [`:checked`](/en-US/docs/Web/CSS/:checked) pseudo-class (applied to hidden radioboxes), see [this demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip"), taken from the [:checked](/en-US/docs/Web/CSS/:checked) reference page.
-
 ## Specifications
 
 {{Specifications}}
@@ -72,5 +68,5 @@ You can use the `:hover` pseudo-class to build an image gallery with full-size i
 
 ## See also
 
-- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://code.google.com/p/chromium/issues/detail?id=370155)
-- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://code.google.com/p/chromium/issues/detail?id=306581)
+- [Chromium bug #370155: Don't make `:hover` sticky on tap on sites that set a mobile viewport](https://bugs.chromium.org/p/chromium/issues/detail?id=370155)
+- [Chromium bug #306581: Immediately show hover and active states on touch when page isn't scrollable.](https://bugs.chromium.org/p/chromium/issues/detail?id=306581)

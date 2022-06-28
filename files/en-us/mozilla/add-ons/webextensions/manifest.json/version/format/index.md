@@ -1,5 +1,5 @@
 ---
-title: Version Format
+title: Manifest Version Format
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version/format
 tags:
   - Add-ons
@@ -7,8 +7,6 @@ tags:
   - WebExtensions
 ---
 {{AddonSidebar}}
-
-# Manifest Version Format
 
 A **version string** consists of one or more _version parts_, separated with dots.
 
@@ -46,15 +44,17 @@ Version parts are also compared left to right, parts A and C are compared as num
 
 ## Examples
 
-    1.-1
-    < 1 == 1. == 1.0 == 1.0.0
-    < 1.1a < 1.1aa < 1.1ab < 1.1b < 1.1c
-    < 1.1pre == 1.1pre0 == 1.0+
-    < 1.1pre1a < 1.1pre1aa < 1.1pre1b < 1.1pre1
-    < 1.1pre2
-    < 1.1pre10
-    < 1.1.-1
-    < 1.1 == 1.1.0 == 1.1.00
-    < 1.10
-    < 1.* < 1.*.1
-    < 2.0
+```
+1.-1
+< 1 == 1. == 1.0 == 1.0.0
+< 1.1a < 1.1aa < 1.1ab < 1.1b < 1.1c
+< 1.1pre == 1.1pre0 == 1.0+
+< 1.1pre1a < 1.1pre1aa < 1.1pre1b < 1.1pre1
+< 1.1pre2
+< 1.1pre10
+< 1.1.-1
+< 1.1 == 1.1.0 == 1.1.00
+< 1.10
+< 1.* < 1.*.1
+< 2.0
+```

@@ -1,6 +1,7 @@
 ---
 title: EyeDropper
 slug: Web/API/EyeDropper
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.EyeDropper
 ---
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper`** interface represents an instance of an eyedropper tool that can be opened and used by the user to select colors from the screen.
 
@@ -22,7 +23,7 @@ The **`EyeDropper`** interface represents an instance of an eyedropper tool that
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 
-- {{DOMxRef("EyeDropper.prototype.open()")}}
+- {{DOMxRef("EyeDropper.open()")}}
   - : Returns a promise that resolves to an object that gives access to the selected color.
 
 ## Examples

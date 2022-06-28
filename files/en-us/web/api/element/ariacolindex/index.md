@@ -1,6 +1,7 @@
 ---
 title: Element.ariaColIndex
 slug: Web/API/Element/ariaColIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,16 +14,11 @@ browser-compat: api.Element.ariaColIndex
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects the value of the `aria-colindex` attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 
-## Syntax
+## Value
 
-    var ariaColIndex = element.ariaColIndex;
-    element.ariaColIndex = ariaColIndex
-
-### Value
-
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -75,4 +71,4 @@ console.log(el.ariaColIndex); // 2
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

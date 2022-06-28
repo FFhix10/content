@@ -36,6 +36,7 @@ border-left-style: outset;
 border-left-style: inherit;
 border-left-style: initial;
 border-left-style: revert;
+border-left-style: revert-layer;
 border-left-style: unset;
 ```
 
@@ -101,7 +102,7 @@ tr, td {
 .b10 {border-left-style: outset;}
 ```
 
-Result
+#### Result
 
 {{ EmbedLiveSample('Examples', 300, 200) }}
 

@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.createHTML()
 slug: Web/API/TrustedTypePolicy/createHTML
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -15,12 +16,15 @@ The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface 
 
 ## Syntax
 
-    var str = TrustedTypePolicy.createHTML(input[,args]);
+```js
+createHTML(input)
+createHTML(input, args)
+```
 
 ### Parameters
 
 - `input`
-  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
+  - : A string containing the string to be sanitized by the policy.
 - `args`{{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 

@@ -1,6 +1,7 @@
 ---
-title: HTMLObjectElement.setCustomValidity
+title: HTMLObjectElement.setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -20,17 +21,17 @@ element.
 ## Syntax
 
 ```js
-HTMLObjectElement.setCustomValidity(message);
+setCustomValidity(errorMessage)
 ```
 
 ### Parameters
 
-- error
+- `errorMessage`
   - : The message to use for validity errors.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -63,7 +64,7 @@ function validate(inputID) {
 ```
 
 It's vital to set the message to an empty string if there are no errors. As long as the
-error message is not null, the form will not pass validation and will not be
+error message is not empty, the form will not pass validation and will not be
 submitted.
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.isHTML()
 slug: Web/API/TrustedTypePolicyFactory/isHTML
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -17,7 +18,9 @@ The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interfa
 
 ## Syntax
 
-    var isHTML = TrustedTypePolicyFactory.isHTML(value);
+```js
+isHTML(value)
+```
 
 ### Parameters
 

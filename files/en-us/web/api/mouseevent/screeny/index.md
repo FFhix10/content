@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.screenY
 slug: Web/API/MouseEvent/screenY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM Events
@@ -10,28 +11,19 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.screenY
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`screenY`** read-only property of the
-{{domxref("MouseEvent")}} interface provides the vertical coordinate (offset) of the
-mouse pointer in global (screen) coordinates.
+The **`screenY`** read-only property of the {{domxref("MouseEvent")}} interface provides the vertical coordinate (offset) of the mouse pointer in global (screen) coordinates.
 
-## Syntax
+## Value
 
-```js
-var y = instanceOfMouseEvent.screenY
-```
+A `double` floating point value.
 
-### Return value
+Early versions of the spec defined this as an integer referring to the number of pixels.
 
-A `double` floating point value. Early versions of the spec defined this as
-an integer referring to the number of pixels. See the "Browser compatibility" section
-for details.
+## Examples
 
-## Example
-
-This example displays your mouse's coordinates whenever you trigger the
-{{Event("mousemove")}} event.
+This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 
 ### HTML
 
@@ -55,7 +47,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -69,5 +61,4 @@ function logKey(e) {
 
 - {{ domxref("MouseEvent") }}
 - {{ domxref("MouseEvent.screenX","screenX") }}
-- {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY",
-    "clientY") }}
+- {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}

@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - recipe:css-property
 browser-compat: css.properties.mask-repeat
@@ -37,6 +36,7 @@ mask-repeat: round repeat, space, repeat-x;
 mask-repeat: inherit;
 mask-repeat: initial;
 mask-repeat: revert;
+mask-repeat: revert-layer;
 mask-repeat: unset;
 ```
 
@@ -53,11 +53,13 @@ One or more `<repeat-style>` values, separated by commas.
   - : The one-value syntax is a shorthand for the full two-value syntax:
 
     <table class="standard-table">
-      <tbody>
+      <thead>
         <tr>
-          <td><strong>Single value</strong></td>
-          <td><strong>Two-value equivalent</strong></td>
+          <th>Single value</th>
+          <th>Two-value equivalent</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td><code>repeat-x</code></td>
           <td><code>repeat no-repeat</code></td>

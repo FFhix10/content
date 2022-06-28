@@ -1,9 +1,9 @@
 ---
 title: SpeechSynthesisUtterance.volume
 slug: Web/API/SpeechSynthesisUtterance/volume
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,28 +13,17 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.volume
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`volume`** property of the
-{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the
-utterance will be spoken at.
+The **`volume`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the utterance will be spoken at.
 
 If not set, the default value 1 will be used.
 
-## Syntax
-
-```js
-var myVolume = speechSynthesisUtteranceInstance.volume;
-speechSynthesisUtteranceInstance.volume = 0.5;
-```
-
-### Value
+## Value
 
 A float that represents the volume value, between 0 (lowest) and 1 (highest.)
 
-If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will
-be overridden by [prosody
-tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
+If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be overridden by [prosody tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
 
 ## Examples
 

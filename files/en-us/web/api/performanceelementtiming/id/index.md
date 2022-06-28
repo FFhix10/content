@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.id
 slug: Web/API/PerformanceElementTiming/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,13 +14,9 @@ browser-compat: api.PerformanceElementTiming.id
 
 The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{htmlattrxref("id")}} of the associated element.
 
-## Syntax
+## Value
 
-    var id = PerformanceElementTiming.id;
-
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 

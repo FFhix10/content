@@ -31,8 +31,6 @@ Values of this type are objects. They contain the following properties:
 
   - : `string`. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `id` will have this value. Otherwise it will have the ID that was generated for the sender.
 
-    Note that in Firefox, before version 54, this value was the extension's internal ID (that is, the [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) that appears in the extension's URL).
-
 - `url`{{optional_inline}}
 
   - : `string`. The URL of the page or frame hosting the script that sent the message.
@@ -50,7 +48,7 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-MessageSender) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-MessageSender) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

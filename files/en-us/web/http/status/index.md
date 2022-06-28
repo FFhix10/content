@@ -8,6 +8,7 @@ tags:
   - Reference
   - Status code
   - Web
+browser-compat: http.status
 ---
 {{HTTPSidebar}}
 
@@ -28,7 +29,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 - {{HTTPStatus(100, "100 Continue")}}
   - : This interim response indicates that the client should continue the request or ignore the response if the request is already finished.
-- {{HTTPStatus(101, "101 Switching Protocol")}}
+- {{HTTPStatus(101, "101 Switching Protocols")}}
   - : This code is sent in response to an {{HTTPHeader("Upgrade")}} request header from the client and indicates the protocol the server is switching to.
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : This code indicates that the server has received and is processing the request, but no response is available yet.
@@ -42,12 +43,12 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
   - : The request succeeded. The result meaning of "success" depends on the HTTP method:
 
     - `GET`: The resource has been fetched and transmitted in the message body.
-    - `HEAD`: The representation headers are included in the response without any message body.
+    - `HEAD`: The representation headers are included in the response without any message body.
     - `PUT` or `POST`: The resource describing the result of the action is transmitted in the message body.
     - `TRACE`: The message body contains the request message as received by the server.
 
 - {{HTTPStatus(201, "201 Created")}}
-  - : The request succeeded, and a new resource created as a result. This is typically the response sent after `POST` requests, or some `PUT` requests.
+  - : The request succeeded, and a new resource was created as a result. This is typically the response sent after `POST` requests, or some `PUT` requests.
 - {{HTTPStatus(202, "202 Accepted")}}
   - : The request has been received but not yet acted upon.
      It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request.
@@ -72,7 +73,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 ## Redirection messages
 
-- {{HTTPStatus(300, "300 Multiple Choice")}}
+- {{HTTPStatus(300, "300 Multiple Choices")}}
   - : The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)
 - {{HTTPStatus(301, "301 Moved Permanently")}}
   - : The URL of the requested resource has been changed permanently. The new URL is given in the response.
@@ -99,7 +100,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 ## Client error responses
 
 - {{HTTPStatus(400, "400 Bad Request")}}
-  - : The server could not understand the request due to invalid syntax.
+  - : The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
 - {{HTTPStatus(401, "401 Unauthorized")}}
   - : Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated".
     That is, the client must authenticate itself to get the requested response.
@@ -208,7 +209,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
 
 ## Browser compatibility
 
-{{Compat("http.status")}}
+{{Compat}}
 
 ## See also
 

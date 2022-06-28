@@ -1,6 +1,7 @@
 ---
 title: Navigator.serial
 slug: Web/API/Navigator/serial
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,11 +16,7 @@ The **`serial`** read-only property of the {{domxref("Navigator")}} interface re
 
 When getting, the same instance of the {{domxref("Serial")}} object will always be returned.
 
-## Syntax
-
-    var serialObj = navigator.serial;
-
-### Value
+## Value
 
 A {{domxref("Serial")}} object.
 

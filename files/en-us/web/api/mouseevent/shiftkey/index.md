@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,27 +12,17 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.shiftKey
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`MouseEvent.shiftKey`** read-only property is a
-boolean value that indicates whether the <kbd>shift</kbd> key was pressed or not
-when a given mouse event occurs.
+The **`MouseEvent.shiftKey`** read-only property is a boolean value that indicates whether the <kbd>shift</kbd> key was pressed or not when a given mouse event occurs.
 
-## Syntax
+## Value
 
-```js
-var shiftKeyPressed = instanceOfMouseEvent.shiftKey
-```
+A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
-### Return value
+## Examples
 
-A boolean value, where `true` indicates that the key is pressed, and
-`false` indicates that the key is _not_ pressed.
-
-## Example
-
-This example logs the `shiftKey` property when you trigger a
-{{Event("click")}} event.
+This example logs the `shiftKey` property when you trigger a {{Event("click")}} event.
 
 ### HTML
 
@@ -53,7 +44,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

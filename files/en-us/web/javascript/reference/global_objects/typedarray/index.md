@@ -12,8 +12,8 @@ browser-compat: javascript.builtins.TypedArray
 {{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an
-underlying [binary data
-buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). There is no global property named `TypedArray`, nor is there a
+underlying [binary data buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+There is no global property named `TypedArray`, nor is there a
 directly visible `TypedArray` constructor. Instead, there are a number of
 different global properties, whose values are typed array constructors for specific
 element types, listed below. On the following pages you will find common properties and
@@ -83,12 +83,16 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     is created in memory, of size `length` _multiplied by
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
 - `typedArray`
-  - : When called with a `typedArray` argument, which can be an
-    object of any of the typed array types (such as `Int32Array`), the
-    `typedArray` gets copied into a new typed array. Each value in
-    `typedArray` is converted to the corresponding type of the
-    constructor before being copied into the new array. The length of the new typed array
-    will be same as the length of the `typedArray` argument.
+  - : When called with a `typedArray` argument, the `typedArray` gets copied
+    into a new typed array. For a **non-{{glossary("bigint")}}** `TypedArray`,
+    the `typedArray` parameter can be an object of only the
+    **non**-{{glossary("bigint")}} typed array types (such as
+    {{JSxRef("Int32Array")}}).  Similarly, for a **{{glossary("bigint")}}**
+    `TypedArray`, the `typedArray` parameter can be an object of only the
+    {{glossary("bigint")}} typed array types (such as {{JSxRef("BigInt64Array")}}).
+    Each value in `typedArray` is converted to the corresponding type of the
+    constructor before being copied into the new array.  The length of the new
+    typed array will be same as the length of the `typedArray` argument.
 - `object`
   - : When called with an `object` argument, a new typed array is
     created as if by the `TypedArray.from()` method.
@@ -241,13 +245,13 @@ with the {{jsxref("Operators/new", "new")}} operator. Calling a `TypedArray`
 constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
-var dv = Int8Array([1, 2, 3]);
+const dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor
 // without new is forbidden
 ```
 
 ```js example-good
-var dv = new Int8Array([1, 2, 3]);
+const dv = new Int8Array([1, 2, 3]);
 ```
 
 ### Property access
@@ -261,7 +265,7 @@ objects.
 
 ```js
 // Setting and getting using standard array syntax
-var int16 = new Int16Array(2);
+const int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
 
@@ -334,7 +338,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 
 ## See also
 
-- A polyfill of typed arrays is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of typed arrays in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

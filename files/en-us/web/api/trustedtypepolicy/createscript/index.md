@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.createScript()
 slug: Web/API/TrustedTypePolicy/createScript
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -15,12 +16,15 @@ The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interfac
 
 ## Syntax
 
-    var str = TrustedTypePolicy.createScript(input[,args]);
+```js
+createScript(input)
+createScript(input, args)
+```
 
 ### Parameters
 
 - `input`
-  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
+  - : A string containing the string to be sanitized by the policy.
 - `args`{{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 

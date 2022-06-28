@@ -6,13 +6,13 @@ tags:
   - Client error
   - HTTP
   - Status code
-browser-compat: http.status.402
+spec-urls: https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.2
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`402 Payment Required`** is a nonstandard client error status response code that is reserved for future use.
+The HTTP **`402 Payment Required`** is a nonstandard response status code that is reserved for future use. This status code was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment.
 
-Sometimes, this code indicates that the request cannot be processed until the client makes a payment. Originally, this code was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment. However, no standard use convention exists and different entities use it in different contexts.
+Sometimes, this status code indicates that the request cannot be processed until the client makes a payment. However, no standard use convention exists and different entities use it in different contexts.
 
 ## Status
 
@@ -29,13 +29,11 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Specifications
 
-| Specification                                                    | Title                           |
-| ---------------------------------------------------------------- | ------------------------------- |
-| {{RFC("7231", "402 Payment Required" , "6.5.2")}} | HTTP/1.1: Semantics and Content |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat}}
+This status code is _reserved_ but not defined. No browser actually supports it and the error will be displayed as a generic `4xx` status code.
 
 ## See also
 

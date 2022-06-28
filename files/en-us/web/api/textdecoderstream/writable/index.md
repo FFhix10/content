@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream.writable
 slug: Web/API/TextDecoderStream/writable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,11 +14,7 @@ browser-compat: api.TextDecoderStream.writable
 
 The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}}.
 
-## Syntax
-
-    var writable = TextDecoderStream.writable;
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 

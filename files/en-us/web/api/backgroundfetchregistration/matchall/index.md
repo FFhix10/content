@@ -1,6 +1,7 @@
 ---
 title: BackgroundFetchRegistration.matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,13 +10,16 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+{{APIRef("Background Fetch API")}}
 
 The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.
 
 ## Syntax
 
-    let records = BackgroundFetchRegistration.matchAll(request,options);
+```js
+matchAll(request)
+matchAll(request,options)
+```
 
 ### Parameters
 

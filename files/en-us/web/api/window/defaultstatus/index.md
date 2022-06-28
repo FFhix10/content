@@ -1,6 +1,7 @@
 ---
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -21,22 +22,19 @@ tags:
 
 Gets/sets the status bar text for the given window.
 
-## Syntax
+## Value
 
-    var sMsg = window.defaultStatus;
-    window.defaultStatus = sMsg;
+A string containing the text to be displayed by default in the statusbar.
 
-### Parameters
+## Examples
 
-- `sMsg` is a string containing the text to be displayed by default in the statusbar.
-
-## Example
-
-    <html>
-     <body onload="window.defaultStatus='hello!';"/>
-      <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
-     </body>
-    </html>
+```html
+<html>
+  <body onload="window.defaultStatus='hello!';"/>
+  <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
+  </body>
+</html>
+```
 
 ## Notes
 

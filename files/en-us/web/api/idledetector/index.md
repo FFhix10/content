@@ -1,6 +1,7 @@
 ---
 title: IdleDetector
 slug: Web/API/IdleDetector
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -13,11 +14,13 @@ browser-compat: api.IdleDetector
 The **`IdleDetector`** interface of the {{domxref('idle_detection_api','Idle
 Detection API','','true')}} provides methods and events for detecting user activity on a device or screen.
 
-This interface requires a secure context. 
+This interface requires a secure context.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("IdleDetector.IdleDetector()")}}
+- {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}}
   _ : Creates a new `IdleDetector` object.
 
 ## Properties
@@ -36,9 +39,8 @@ This attribute returns `null` before `start()` is called.
 
 ## Events
 
-- {{domxref("IdleDetector.onchange")}}
-  - : Called when the value of `userState` or `screenState` has changed. This method
-receives an `Event` object.
+- {{domxref("IdleDetector.change_event", "change")}}
+  - : Called when the value of `userState` or `screenState` has changed.
 
 ## Methods
 
@@ -103,4 +105,3 @@ stopButton.addEventListener('click', () => {
 ## Browser compatibility
 
 {{Compat}}
-

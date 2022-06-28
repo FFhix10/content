@@ -1,6 +1,7 @@
 ---
 title: PerformanceElementTiming.toJSON()
 slug: Web/API/PerformanceElementTiming/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -15,7 +16,13 @@ The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interfa
 
 ## Syntax
 
-    var json = PerformanceElementTiming.toJSON();
+```js
+toJSON()
+```
+
+### Parameters
+
+None.
 
 ### Return value
 

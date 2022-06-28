@@ -1,6 +1,7 @@
 ---
 title: Navigator.contacts
 slug: Web/API/Navigator/contacts
+page-type: web-api-instance-property
 tags:
   - Contact Picker API
   - Contacts
@@ -11,22 +12,16 @@ tags:
   - contact picker
 browser-compat: api.Navigator.contacts
 ---
-{{draft}}{{DefaultAPISidebar("Contact Picker API")}}
+{{DefaultAPISidebar("Contact Picker API")}}
 
 The **`contacts`** read-only property of the
 {{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface
 which allows users to select entries from their contact list and share limited details
 of the selected entries with a website or application.
 
-## Syntax
+### Value
 
-```js
-var contactsManager = navigator.contacts;
-```
-
-### Return Value
-
-{{domxref('ContactsManager')}}
+A {{domxref('ContactsManager')}} object. Two successive calls return the same object.
 
 ## Examples
 

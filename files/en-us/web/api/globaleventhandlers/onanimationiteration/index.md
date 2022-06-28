@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers.onanimationiteration
 slug: Web/API/GlobalEventHandlers/onanimationiteration
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -19,7 +20,7 @@ tags:
   - web animations api
 browser-compat: api.GlobalEventHandlers.onanimationiteration
 ---
-{{APIRef("CSS3 Animations")}} {{Draft}}
+{{APIRef("CSS3 Animations")}}
 
 The **`onanimationiteration`** property of the
 {{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for

@@ -1,6 +1,7 @@
 ---
 title: HTMLMarqueeElement
 slug: Web/API/HTMLMarqueeElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMarqueeElement
 ---
-{{APIRef("HTML DOM")}}{{Draft}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLMarqueeElement`** interface provides methods to manipulate {{HTMLElement("marquee")}} elements.
 

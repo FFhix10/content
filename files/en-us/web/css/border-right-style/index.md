@@ -36,6 +36,7 @@ border-right-style: outset;
 border-right-style: inherit;
 border-right-style: initial;
 border-right-style: revert;
+border-right-style: revert-layer;
 border-right-style: unset;
 ```
 
@@ -116,4 +117,4 @@ tr, td {
 ## See also
 
 - The other style-related border properties: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-style")}}.
-- The other bottom-border-related properties: {{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, and {{Cssxref("border-right-width")}}.
+- The other right-border-related properties: {{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, and {{Cssxref("border-right-width")}}.

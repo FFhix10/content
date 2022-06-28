@@ -1,22 +1,21 @@
 ---
 title: 'ARIA: section role'
-slug: Web/Accessibility/ARIA/roles/section_role
-tags: 
-
+slug: Web/Accessibility/ARIA/Roles/section_role
+tags:
   - Accessibility
   - ARIA
   - roles
   - Reference
   - ARIA roles
+spec-urls: https://w3c.github.io/aria/#section
 ---
-
 The **`section` role**, an abstract role, is superclass role for renderable structural containment components.
 
-> **Note:**  The `section` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles/#Abstract_roles). It is included here for completeness of documentation. It **should not be used** by web authors.
+> **Note:**  The `section` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It **should not be used** by web authors.
 
 ## Description
 
-The structural `section` role is an abstract role for categorizing all the section subclass roles. The role must not be used. Some subclasses, like [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), 
+The structural `section` role is an abstract role for categorizing all the section subclass roles. The role must not be used. Some subclasses, like [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role),
 [`note`](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role), and [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role), are useful, and can be used to add semantics when no semantic HTML elements quite fits the purpose of a component. Others, like [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role), [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role), and [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/subscript_role), aren't necessary, as there are HTML element equivalents. In this case, {{HTMLElement('code')}} {{HTMLElement('figure')}} and {{HTMLElement('subscript')}}, respectively.
 
 ## Best Practices
@@ -25,14 +24,11 @@ Do not use.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#section","ARIA: section role")}}                                             | {{Spec2('ARIA')}}                         |
-
+{{Specifications}}
 
 ## See Also
 
-- [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/roles/structure_role)
+- [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `associationlist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlist_role)
 - [ARIA: `associationlistitemkey` role](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
@@ -67,8 +63,6 @@ Do not use.
 - [ARIA: `term` role](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
 - [ARIA: `time` role](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
 - [ARIA: `tooltip` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
-
-
 
 <section id="Quick_links">
 

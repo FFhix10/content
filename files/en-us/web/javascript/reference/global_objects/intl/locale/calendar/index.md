@@ -46,18 +46,18 @@ The `calendar` property returns the part of the `Locale` that indicates the `Loc
   - : Islamic calendar, Umm al-Qura
 - `islamic-tbla`
   - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)
-- `islamic-civil`	
+- `islamic-civil`
   - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)
 - `islamic-rgsa`
   - : Islamic calendar, Saudi Arabia sighting
 - `iso8601`
   - : ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)
-- `japanese`	
+- `japanese`
   - : Japanese Imperial calendar
 - `persian`
   - : Persian calendar
 - `roc`
-  - : Civil (algorithmic) Arabic calendar
+  - : Minguo Calendar (Republic of China)
 - `islamicc`
   - : Civil (algorithmic) Arabic calendar
     > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
@@ -66,7 +66,7 @@ The `calendar` property returns the part of the `Locale` that indicates the `Loc
 
 ### Adding a calendar in the Locale string
 
-Calendar eras fall under the category of locale key "extension keys". These keys add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the calendar era type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor. To add the calendar type, first add the `-u` extension to the string. Next, add the `-ca` extension to indicate that you are adding a calendar type. Finally, add the calendar era to the string.
+Calendar eras fall under the category of locale key "extension keys". These keys add additional data about the locale, and are added to locale identifiers by using the `-u` extension. Thus, the calendar era type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. To add the calendar type, first add the `-u` extension to the string. Next, add the `-ca` extension to indicate that you are adding a calendar type. Finally, add the calendar era to the string.
 
 ```js
 let locale = new Intl.Locale("fr-FR-u-ca-buddhist");
@@ -75,7 +75,7 @@ console.log(locale.calendar); // Prints "buddhist"
 
 ### Adding a calendar with a configuration object
 
-The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can contain any of several extension types, including calendars. Set the `calendar` property of the configuration object to your desired calendar era, and then pass it into the constructor.
+The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument, which can contain any of several extension types, including calendars. Set the `calendar` property of the configuration object to your desired calendar era, and then pass it into the constructor.
 
 ```js
 let locale = new Intl.Locale("fr-FR", { calendar: "buddhist" });

@@ -12,7 +12,7 @@ browser-compat: css.properties.box-flex
 ---
 {{CSSRef}}{{Non-standard_Header}}
 
-> **Warning:** This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for '`box-flex`' (which were based on this property) or the behavior of '`-webkit-box-flex`' (which is based on those drafts). See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
+> **Warning:** This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for '`box-flex`' (which were based on this property) or the behavior of '`-webkit-box-flex`' (which is based on those drafts). See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 The **`-moz-box-flex`** and **`-webkit-box-flex`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
 
@@ -28,9 +28,13 @@ The **`-moz-box-flex`** and **`-webkit-box-flex`** [CSS](/en-US/docs/Web/CSS) pr
 /* Global values */
 -moz-box-flex: inherit;
 -moz-box-flex: initial;
+-moz-box-flex: revert;
+-moz-box-flex: revert-layer;
 -moz-box-flex: unset;
 -webkit-box-flex: inherit;
 -webkit-box-flex: initial;
+-webkit-box-flex: revert;
+-webkit-box-flex: revert-layer;
 -webkit-box-flex: unset;
 ```
 
